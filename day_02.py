@@ -17,7 +17,7 @@ def isSafe2(report):
 
 if __name__ == '__main__':
 
-    file = open("dayTwoInput.txt", "r")
+    file = open("inputfiles/day2.txt", "r")
     pOne, pTwo = 0, 0
     for line in file:
         report = [int(x) for x in line.split()]

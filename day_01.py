@@ -14,7 +14,7 @@ def calcOccr(list1, list2):
     return sum(x * list2.count(x) for x in list1)
 
 if __name__ == "__main__":
-    list1, list2 = parseInput("dayOneInput.txt")
+    list1, list2 = parseInput("inputfiles/day1.txt")
     list1.sort()
     list2.sort()
 
