@@ -1,10 +1,10 @@
 def parseInput(file):
     list1, list2 = [], []
-    inputfile = open(file, "r")
-    for line in inputfile:
-        tmp = line.split()
-        list1.append(int(tmp[0]))
-        list2.append(int(tmp[1]))
+    with open(file, "r") as inputfile:
+        for line in inputfile:
+            tmp = line.split()
+            list1.append(int(tmp[0]))
+            list2.append(int(tmp[1]))
     return list1, list2
 
 def countDiff(list1, list2):

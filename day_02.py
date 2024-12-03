@@ -17,19 +17,18 @@ def isSafe2(report):
 
 if __name__ == '__main__':
 
-    file = open("inputfiles/day2.txt", "r")
-    pOne, pTwo = 0, 0
-    for line in file:
-        report = [int(x) for x in line.split()]
+    with open("inputfiles/day2.txt", "r") as file:
+        pOne, pTwo = 0, 0
+        for line in file:
+            report = [int(x) for x in line.split()]
 
-        if report[len(report)-1] < report[0]:
-            report.reverse()
+            if report[len(report)-1] < report[0]:
+                report.reverse()
 
-        if isSafe(report):
-            pOne += 1
-        elif isSafe2(report):
-            pTwo += 1
-
+            if isSafe(report):
+                pOne += 1
+            elif isSafe2(report):
+                pTwo += 1
     print(pOne, pOne+pTwo)
 
 
