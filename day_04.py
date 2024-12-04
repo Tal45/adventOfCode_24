@@ -52,8 +52,10 @@ def count_x_mas(grid):
 
 
 if __name__ == '__main__':
+    # replace with your input directory
+    input_directory = "inputfiles/day4.txt"
     mat = []
-    with open("inputfiles/day4.txt") as f:
+    with open(input_directory) as f:
         for line in f:
             row = list(line.rstrip())
             mat.append(row)

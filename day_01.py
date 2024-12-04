@@ -1,4 +1,4 @@
-def parseInput(file):
+def parse_input(file):
     list1, list2 = [], []
     with open(file, "r") as inputfile:
         for line in inputfile:
@@ -7,18 +7,23 @@ def parseInput(file):
             list2.append(int(tmp[1]))
     return list1, list2
 
-def countDiff(list1, list2):
+
+def count_diff(list1, list2):
     return sum(abs(x-y) for x, y in zip(list1, list2))
 
-def calcOccr(list1, list2):
+
+def calc_occr(list1, list2):
     return sum(x * list2.count(x) for x in list1)
 
+
 if __name__ == "__main__":
-    list1, list2 = parseInput("inputfiles/day1.txt")
+    # replace with your input directory
+    input_directory = "inputfiles/day1.txt"
+    list1, list2 = parse_input(input_directory)
     list1.sort()
     list2.sort()
 
     # part1
-    print(countDiff(list1, list2))
+    print(count_diff(list1, list2))
     # part2
-    print(calcOccr(list1, list2))
+    print(calc_occr(list1, list2))

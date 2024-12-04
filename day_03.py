@@ -42,5 +42,7 @@ def parse_with_enablers(filename):
 
 
 if __name__ == "__main__":
-    print(parse_input("inputfiles/day3.txt"))
-    print(parse_with_enablers("inputfiles/day3.txt"))
+    # replace with your input directory
+    input_directory = "inputfiles/day3.txt"
+    print(parse_input(input_directory))
+    print(parse_with_enablers(input_directory))
