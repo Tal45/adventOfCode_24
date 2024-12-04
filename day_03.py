@@ -26,7 +26,7 @@ def parse_with_enablers(filename):
     all_matches += [(match.start(), "do") for match in do_pattern.finditer(input_text)]
     all_matches += [(match.start(), "dont") for match in dont_pattern.finditer(input_text)]
     all_matches += [(match.start(), "mul", match.groups()) for match in mul_pattern.finditer(input_text)]
-    all_matches.sort(key= lambda x: x[0])
+    all_matches.sort(key=lambda b: b[0])
 
     mul_enabled = True
     for match in all_matches:
@@ -39,6 +39,7 @@ def parse_with_enablers(filename):
             mul_enabled = False
 
     return total_sum
+
 
 if __name__ == "__main__":
     print(parse_input("inputfiles/day3.txt"))
