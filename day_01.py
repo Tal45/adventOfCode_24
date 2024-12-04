@@ -1,3 +1,6 @@
+# question & input can be found @ https://adventofcode.com/2024/day/1
+
+
 def parse_input(file):
     list1, list2 = [], []
     with open(file, "r") as inputfile:

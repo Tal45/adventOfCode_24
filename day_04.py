@@ -1,3 +1,5 @@
+# question & input can be found @ https://adventofcode.com/2024/day/4
+
 def count_xmas(grid):
     rows, cols = len(grid), len(grid[0])
     word = "XMAS"

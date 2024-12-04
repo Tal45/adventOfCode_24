@@ -1,3 +1,5 @@
+# question & input can be found @ https://adventofcode.com/2024/day/3
+
 import re
 
 

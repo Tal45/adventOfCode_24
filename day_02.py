@@ -1,3 +1,5 @@
+# question & input can be found @ https://adventofcode.com/2024/day/2
+
 def is_safe(report):
     for i in range(1, len(report)):
         res = report[i] - report[i-1]
