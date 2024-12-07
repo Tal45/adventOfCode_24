@@ -23,13 +23,13 @@ def locate_guard(mat):
     for i in range(len(mat)):
         for j in range(len(mat[0])):
             if mat[i][j] == '^':
-                return [i, j], 0
+                return (i, j), 0
             elif mat[i][j] == '>':
-                return [i, j], 1
+                return (i, j), 1
             elif mat[i][j] == 'v':
-                return [i, j], 2
+                return (i, j), 2
             elif mat[i][j] == '<':
-                return [i, j], 3
+                return (i, j), 3
     return (0, 0), 0
 
 
