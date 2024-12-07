@@ -54,7 +54,7 @@ def count_distinct_positions(grid):
             direction = (direction + 1) % 4
 
         else:
-            cords[0], cords[1] = next_step[0], next_step[1]
+            cords = next_step
             if (
                     0 <= next_step[0] <= row_len and 0 <= next_step[1] <= col_len
                     and not visited[next_step[0]][next_step[1]]
@@ -92,7 +92,7 @@ def count_possible_new_obstacles(grid):
                     res += 1
                 grid[i][j] = 'X'
 
-    return str(res)
+    return res
 
 
 def is_loop(mat, cords, dir):
