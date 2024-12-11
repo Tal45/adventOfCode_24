@@ -8,11 +8,11 @@ def parse_input(dir):
     return list(map(int, line.split()))
 
 
-def count_stones_after_blinks(stones, iterations):
+def count_stones_after_blinks(stones, blinks):
     curr_counts = Counter(stones)
     transformations = {}
 
-    for _ in range(iterations):
+    for _ in range(blinks):
         next_counts = Counter()
 
         for val, count in curr_counts.items():
