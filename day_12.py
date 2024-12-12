@@ -56,8 +56,8 @@ def calculate_cost(grid):
                 find_all_plants(grid, (row,col), grid[row][col], region, visit_mark)
                 perimeter = sum(x[2] for x in region)
                 area = len(region)
-                region_cords = get_region_cords(grid, visit_mark)
-                sides = count_sides(region_cords)
+                all_region_cords = get_all_region_cords(grid, visit_mark)
+                sides = count_sides(all_region_cords)
                 total_cost += area * perimeter
                 discount_cost += area * sides
                 visit_mark += 1
@@ -65,7 +65,7 @@ def calculate_cost(grid):
     return total_cost, discount_cost
 
 
-def get_region_cords(grid, mark):
+def get_all_region_cords(grid, mark):
     tmp = []
     for r in range(len(grid)):
         for c in range(len(grid[0])):
